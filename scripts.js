@@ -44,18 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'The Title',
         start: '2024-07-05T00:00:00',
         end: '2024-07-05T00:02:00'
+      },
+      {
+        title: 'The Title',
+        start: '2024-07-05T00:00:00',
+        end: '2024-07-05T01:00:00'
       }
-    ]
+    ],
+    
+    // slotEventOverlap: false
   });
   calendar.render();
 });
-
-var calendar = new Calendar(calendarEl, {
-  events: [
-  { // this object will be "parsed" into an Event Object
-      title: 'The Title', // a property!
-      start: '2024-06-17', // a property!
-      end: '2024-06-17' // a property! ** see important note below about 'end' **
-  }
-  ]
-  })
