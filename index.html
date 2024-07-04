@@ -40,14 +40,17 @@
                     <button type="button" class="cancel" onclick="closeForm()">x</button>
                 </div>
     
-                <label for="date"><b>Date</b></label>
-                <input type="date" placeholder="Select your date" name="date" id="date" required>
+                <label for="dateSell"><b>Date</b></label>
+                <input type="date" placeholder="Select your date" name="dateSell" id="dateSell" required>
 
-                <label for="time"><b>Time</b></label>
-                <input type="time" placeholder="Select your time" name="time" id="time" required>
+                <label for="timeSell"><b>Time start</b></label>
+                <input type="time" placeholder="Select your time" name="timeSell" id="timeSell" required>
 
-                <label for="class"><b>Class</b></label>
-                <input type="text" placeholder="Enter your class" name="class" id="class" required>
+                <label for="timeSellEnd"><b>Time end</b></label>
+                <input type="time" placeholder="Select your time" name="timeSellEnd" id="timeSellEnd" required>
+
+                <label for="className"><b>Class</b></label>
+                <input type="text" placeholder="Enter your class" name="className" id="className" required>
 
                 <label for="incubator"><b>Incubator</b></label>
                 <select name="incubator" id="incubator">
@@ -58,7 +61,7 @@
                     <option value="incubatorOut2">Outdoor Incubator 2</option>
                 </select>
             
-                <button type="submit" class="btn" onclick="resetForm()" value="Reset value">Submit</button>
+                <button type="submit" class="btn" onclick="closeForm()" value="Reset value">Submit</button>
             </form>
         </div>
     <script src="scripts.js"></script>

@@ -12,20 +12,40 @@ function resetForm() {
   document.getElementById("bookingForm").reset();
 }
 
+
+
+// Defining variable to store list of events
+
+let ListOfBooking = [];
+
+
 // Function to retrive information from HTML form 
 
-const bookedSlots = [];
+const form = document.getElementById('bookingForm');
 
-document.getElementById('bookingForm').addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const date = document.getElementById('date');
-  const time = document.getElementById('time');
+  const dateSell = document.getElementById('dateSell').value;
+  const timeSell = document.getElementById('timeSell').value;
+  const className = document.getElementById('className').value;
+  const incubator = document.getElementById('incubator').value;
 
-  bookedSlots.push({date, time})
+  console.log(dateSell, timeSell, className, incubator);
 
-console.log(bookedSlots);
+  let event = {
+    title: className,
+    start: dateSell + 'T' + timeSell + ':00',
+    end: dateSell + 'T' + timeSell + ':00',
+  };
+
+  ListOfBooking.push(event);
+
+  console.log(ListOfBooking);
 });
+
+
+
 
 // Creating the calender - Shamir
 
@@ -56,3 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   calendar.render();
 });
+
+var calendar = new Calendar(calendarEl, {
+  events: {
+    title: className,
+    start: dateSell + 'T' + timeSell + ':00',
+    end: dateSell + 'T' + timeSell + ':00',
+  },
+  })
